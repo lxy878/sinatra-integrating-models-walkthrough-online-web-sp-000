@@ -10,10 +10,10 @@ class App < Sinatra::Base
     text_from_user = params[:user_text]
 
     my_text = TextAnalyzer.new("The rain in Spain stays mainly on the plain.")
-    my_text.count_of_words
-    my_text.count_of_vowels
-    my_text.count_of_consonants
-    my_text.most_used_letter
+    puts my_text.count_of_words
+    puts my_text.count_of_vowels
+    puts my_text.count_of_consonants
+    puts my_text.most_used_letter
     erb :results
   end
 end
