@@ -8,6 +8,7 @@ class App < Sinatra::Base
 
   post '/' do
     text_from_user = params[:user_text]
+    raise text_from_user
     text_analyzer = TextAnalyzer.new(text_analyzer)
     puts text_analyzer.count_of_vowels
     erb :results
