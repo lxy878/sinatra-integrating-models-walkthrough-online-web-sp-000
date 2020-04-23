@@ -9,7 +9,7 @@ class App < Sinatra::Base
   post '/' do
     text_from_user = params[:user_text]
 
-    my_text = TextAnalyzer.new("The rain in Spain stays mainly on the plain.")
+    my_text = TextAnalyzer.new(text_from_user)
     puts my_text.count_of_words
     puts my_text.count_of_vowels
     puts my_text.count_of_consonants
